@@ -13,43 +13,13 @@
                     Speak with our founder for 20 minutes and get 20 free postcards mailed out. No catch. We're just looking for product feedback.
                 </p>
                 
-                <!-- Alpine.js form with validation -->
-                <div x-data="emailSignup()">
-                    <form class="hero-form" 
-                          hx-post="/api/signup" 
-                          hx-trigger="submit" 
-                          hx-swap="none"
-                          @submit.prevent="submitForm">
-                        <div class="form-group">
-                            <input type="email" 
-                                   x-model="email" 
-                                   placeholder="Enter your email" 
-                                   class="email-input" 
-                                   :class="{ 'error': showError }"
-                                   required>
-                            <button type="submit" 
-                                    class="btn btn-orange"
-                                    :disabled="loading">
-                                <span x-show="!loading">Get Free Postcards</span>
-                                <span x-show="loading">Sending...</span>
-                            </button>
-                        </div>
-                        <div x-show="showError" x-text="errorMessage" class="error-message"></div>
-                        <div x-show="showSuccess" class="success-message">
-                            Thank you! We'll be in touch soon.
-                            <br>
-                            <button type="button" 
-                                    class="btn btn-green btn-small"
-                                    style="margin-top: 10px;"
-                                    @click="openAdvisoryModal"
-                                    hx-get="/api/advisory-form"
-                                    hx-target="#advisory-modal"
-                                    :hx-vals="JSON.stringify({email: email})"
-                                    hx-trigger="click">
-                                Skip the wait - Schedule your call now!
-                            </button>
-                        </div>
-                    </form>
+                <!-- Direct CTA button -->
+                <div class="hero-cta">
+                    <a href="#" 
+                       class="btn btn-orange"
+                       hx-get="/api/advisory-form"
+                       hx-target="#advisory-modal"
+                       hx-trigger="click">Get Free Postcards</a>
                 </div>
             </div>
             <div class="hero-media">
