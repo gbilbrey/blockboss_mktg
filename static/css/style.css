@@ -514,6 +514,11 @@ body {
         margin: 15px 0;
     }
     
+    .hero {
+        padding: 60px 0;
+        min-height: auto;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -522,10 +527,39 @@ body {
     
     .hero-title {
         font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
     }
     
     .hero-form .form-group {
         flex-direction: column;
+    }
+    
+    .hero-cta {
+        margin-top: 25px;
+    }
+    
+    /* Fix carousel mobile sizing */
+    .postcard-container {
+        min-height: 300px;
+        margin: 0 10px;
+    }
+    
+    .postcard-image {
+        max-width: 90%;
+        max-height: 90%;
+    }
+    
+    .carousel-caption {
+        padding: 20px 15px 10px;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.8rem;
     }
     
     .steps-grid {
@@ -564,8 +598,19 @@ body {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 40px 0;
+    }
+    
     .hero-title {
         font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
     
     .section-title,
@@ -576,6 +621,16 @@ body {
     
     .container {
         padding: 0 15px;
+    }
+    
+    /* Ensure carousel fits on very small screens */
+    .postcard-container {
+        min-height: 250px;
+        margin: 0 5px;
+    }
+    
+    .postcard-carousel {
+        margin: 0 -5px;
     }
 }
 
