@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Feedback - BlockBoss{% endblock %}
+
+{% block content %}
+<section class="page-section">
+    <div class="container">
+        <h1 class="page-title">Share Your Feedback</h1>
+        <div class="content">
+            <p>We value your input as we continue to improve BlockBoss. Your feedback helps us build better features for field service professionals.</p>
+            <form class="feedback-form">
+                <div class="form-group">
+                    <label for="feedback-email">Email:</label>
+                    <input type="email" id="feedback-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback-message">Your Feedback:</label>
+                    <textarea id="feedback-message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-orange">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %} 
